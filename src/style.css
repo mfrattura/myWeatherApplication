@@ -1,0 +1,13 @@
+body {
+  background-color: #f9f7fe;
+  font-family: "Parkinsans", sans-serif;
+}
+
+.weather-app {
+  background-color: white;
+  max-width: 700px;
+  margin: 30px auto;
+  border-radius: 13px;
+  box-shadow: 0 30px 50px lightgray;
+  padding: 30px;
+}
