@@ -3,6 +3,14 @@ body {
   font-family: "Parkinsans", sans-serif;
 }
 
+hr {
+  border: none;
+  height: 1px;
+  background-color: #f9f7fee0;
+  width: 90%;
+  margin: 30px auto;
+}
+
 .weather-app {
   background-color: white;
   max-width: 700px;
@@ -10,4 +18,63 @@ body {
   border-radius: 13px;
   box-shadow: 0 30px 50px lightgray;
   padding: 30px;
+}
+
+.search-input {
+  background-color: #f9f7fe;
+  border: none;
+  border-radius: 6px;
+  width: 85%;
+  font-size: 16px;
+  padding: 15px 20px;
+}
+
+.search-button {
+  background-color: #885df1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  width: 90px;
+  margin-left: 8px;
+  padding: 13px 10px;
+  font-size: 16px;
+}
+
+.weather-app-data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-app-details {
+  color: rgb(170, 166, 166);
+}
+
+.weather-app-temp-container {
+  display: flex;
+  margin-top: 50px;
+  margin-right: 50px;
+}
+
+.weather-icon {
+  font-size: 60px;
+  margin-right: 10px;
+}
+
+.weather-temp {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.weather-unit {
+  font-size: 45px;
+}
+
+.weather-forecast {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
 }
