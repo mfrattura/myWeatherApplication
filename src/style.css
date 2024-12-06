@@ -8,7 +8,11 @@ hr {
   height: 1px;
   background-color: #f9f7fee0;
   width: 90%;
-  margin: 30px auto;
+  margin: 20px 0 10px 0;
+}
+
+a {
+  color: #885df1;
 }
 
 .weather-app {
@@ -45,13 +49,17 @@ hr {
   justify-content: space-between;
 }
 
+.weather-app-city {
+  font-size: 38px;
+  margin: 0;
+}
+
 .weather-app-details {
   color: rgb(170, 166, 166);
 }
 
 .weather-app-temp-container {
   display: flex;
-  margin-top: 50px;
   margin-right: 50px;
 }
 
@@ -66,7 +74,8 @@ hr {
 }
 
 .weather-unit {
-  font-size: 45px;
+  font-size: 20px;
+  margin-top: 13px;
 }
 
 .weather-forecast {
@@ -75,6 +84,16 @@ hr {
   padding: 20px;
 }
 
+.wind,
+.humidity {
+  line-height: 25px;
+  font-weight: 700;
+  color: #885df1;
+}
+
 footer {
   text-align: center;
+  font-weight: 500;
+  font-size: 13px;
+  color: rgb(170, 166, 166);
 }
