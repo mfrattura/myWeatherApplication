@@ -8,7 +8,7 @@ function refreshWeather(response) {
   let icon = response.data.condition.icon_url;
   let date = new Date(response.data.time * 1000);
 
-  // change the elements to the API Data
+  // select the page element
   let cityElement = document.querySelector("#city");
   let tempElement = document.querySelector("#temperature");
   let humidityElement = document.querySelector("#humidity");
@@ -17,6 +17,7 @@ function refreshWeather(response) {
   let iconElement = document.querySelector("#icon");
   let timeElement = document.querySelector("#time");
 
+  // change the elements to the API Data
   cityElement.innerHTML = city;
   tempElement.innerHTML = Math.round(temperature);
   humidityElement.innerHTML = `${humidity}%`;
