@@ -87,8 +87,11 @@ a {
 
 .weather-forecast {
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 15px;
+  justify-content: space-around;
+}
+
+.forecast-day {
+  display: block;
 }
 
 .forecast-date {

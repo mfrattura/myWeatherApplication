@@ -61,7 +61,32 @@ function searchSubmit(event) {
   searchCity(searchinput.value);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["tues", "weds", "Thurs", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+          <div class="forecast-day">
+            <div class="forecast-date">${day}</div>
+            <div class="forecast-icon">☀</div>
+            <div class="forecast-temps">
+              <div>25°</div>
+              <div>10°</div>
+            </div>
+            </div>
+`;
+
+    forecastElement.innerHTML = forecastHtml;
+  });
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", searchSubmit);
 
 searchCity("Kelowna");
+displayForecast();
