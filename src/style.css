@@ -1,5 +1,9 @@
 body {
-  background-color: #f9f7fe;
+  background: linear-gradient(
+    109.6deg,
+    rgb(255, 221, 225) 11.2%,
+    rgb(255, 255, 255) 92.2%
+  );
   font-family: "Parkinsans", sans-serif;
 }
 
@@ -16,7 +20,11 @@ a {
 }
 
 .weather-app {
-  background-color: white;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(226, 240, 254) 0%,
+    rgb(255, 247, 228) 90%
+  );
   max-width: 700px;
   margin: 30px auto;
   border-radius: 13px;
