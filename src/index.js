@@ -92,12 +92,13 @@ function displayForecast(response) {
             <img class="forecast-icon" src="${day.condition.icon_url}" />
             </div>
             <div class="forecast-temps">
+            <strong><div class="forecast-temp">${Math.round(
+              day.temperature.maximum
+            )}°</div></strong>
               <div class="forecast-temp">${Math.round(
                 day.temperature.minimum
               )}°</div>
-              <div class="forecast-temp">${Math.round(
-                day.temperature.maximum
-              )}°</div>
+              
             </div>
             </div>
 `;
@@ -110,5 +111,5 @@ function displayForecast(response) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", searchSubmit);
 
-searchCity("Kelowna");
+searchCity("Perth");
 displayForecast();
