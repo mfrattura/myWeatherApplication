@@ -2,6 +2,7 @@ function refreshWeather(response) {
   // Get data from API
   let temperature = response.data.temperature.current;
   let city = response.data.city;
+  let country = response.data.country;
   let humidity = response.data.temperature.humidity;
   let wind = response.data.wind.speed;
   let condition = response.data.condition.description;
@@ -10,6 +11,7 @@ function refreshWeather(response) {
 
   // select the page element
   let cityElement = document.querySelector("#city");
+  let countryElement = document.querySelector("#country");
   let tempElement = document.querySelector("#temperature");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
@@ -19,6 +21,7 @@ function refreshWeather(response) {
 
   // change the elements to the API Data
   cityElement.innerHTML = city;
+  countryElement.innerHTML = country;
   tempElement.innerHTML = Math.round(temperature);
   humidityElement.innerHTML = `${humidity}%`;
   windElement.innerHTML = `${wind}km/h`;
@@ -54,7 +57,18 @@ function formatDate(date) {
 function searchCity(city) {
   let apiKey = "b01d00745bd8dot3d0a8e8b524fd3417";
   let apiurl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-  axios.get(apiurl).then(refreshWeather);
+  axios
+    .get(apiurl)
+    .then(refreshWeather)
+    .catch(function (error) {
+      if (error.response && error.response.status === 404) {
+        alert("City not found. Please try again.");
+        console.log(error.response);
+        console.log(error.response.status);
+      } else {
+        alert("City not found, please try again later");
+      }
+    });
 }
 
 function searchSubmit(event) {
